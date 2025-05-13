@@ -1,3 +1,5 @@
+import MovieCard from "../components/MovieCard";
+
 function Home() {
     const movies = [
     {id: 1, title: "Thunderbolts *", release_date: "2025"},
@@ -8,6 +10,11 @@ function Home() {
     {id: 6, title: "Mission: Impossible – Dead Reckoning Part Two", release_date: "2025"},
 ];
 
-    return <div className="Home"></div>
+    return <div className="home">
+        <div className="movies-grid">
+            {movies.map(movie => <MovieCard movie={movie} key={movie.id}/>)}
+        </div>
+    </div>
 }
 
+export default Home;
