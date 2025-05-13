@@ -10,7 +10,14 @@ function Home() {
     {id: 6, title: "Mission: Impossible – Dead Reckoning Part Two", release_date: "2025"},
 ];
 
+const handleSearch = () => {
+
+}
+
     return <div className="home">
+        <form onSubmit={handleSearch} className="search-form">
+            <input type="text" placeholder="Search for movies..." className="search-input" />
+        </form>
         <div className="movies-grid">
             {movies.map(movie => <MovieCard movie={movie} key={movie.id}/>)}
         </div>
